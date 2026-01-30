@@ -68,9 +68,12 @@
       margin-bottom: 28px;
     }
 
+    /* Ajuste: melhor contraste, mantendo toque neon */
     .highlight {
-      color: var(--verde-neon);
-      font-weight: 600;
+      color: var(--verde-escuro);
+      font-weight: 700;
+      border-bottom: 3px solid var(--verde-neon);
+      padding-bottom: 2px;
     }
 
     .info {
@@ -101,9 +104,10 @@
       color: #777;
     }
 
+    /* Ajuste: ícone NOOON maior e mais visível */
     .parceria img {
-      height: 20px;
-      opacity: 0.7;
+      height: 30px; /* antes 20px */
+      opacity: 0.8;
       transition: opacity 0.2s ease, transform 0.2s ease;
     }
 
@@ -119,13 +123,8 @@
     }
 
     @media (max-width: 600px) {
-      h1 {
-        font-size: 1.8rem;
-      }
-
-      p {
-        font-size: 1rem;
-      }
+      h1 { font-size: 1.8rem; }
+      p { font-size: 1rem; }
     }
   </style>
 </head>
