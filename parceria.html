@@ -5,10 +5,10 @@
   <title>Parceria | Super Sócio + NOOON</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Não indexar no Google -->
+  <!-- Página oculta -->
   <meta name="robots" content="noindex, nofollow" />
 
-  <!-- Favicon -->
+  <!-- Favicons -->
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="apple-touch-icon" href="apple-touch-icon-180.png">
 
@@ -23,7 +23,12 @@
       --cinza-texto: #2f2f2f;
     }
 
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
 
     body {
       background: linear-gradient(180deg, #ffffff, var(--verde-claro));
@@ -57,15 +62,32 @@
       display: flex;
       align-items: center;
       gap: 14px;
+      text-decoration: none;
+      color: inherit;
     }
 
-    .brand img { height: 44px; }
+    .brand img {
+      height: 44px;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .brand:hover img {
+      transform: scale(1.03);
+      opacity: 0.9;
+    }
 
     h1 {
       font-size: 1.6rem;
       font-weight: 800;
       color: var(--verde-escuro);
       letter-spacing: 0.2px;
+    }
+
+    .subtitle {
+      margin-top: 6px;
+      color: #666;
+      font-weight: 600;
+      font-size: 0.95rem;
     }
 
     .badge {
@@ -82,9 +104,10 @@
       white-space: nowrap;
     }
 
-    .badge img { height: 18px; opacity: 0.85; }
-
-    .content { margin-top: 6px; }
+    .badge img {
+      height: 22px;
+      opacity: 0.85;
+    }
 
     .content p {
       font-size: 1.02rem;
@@ -94,7 +117,7 @@
 
     .box {
       margin-top: 18px;
-      padding: 18px 18px;
+      padding: 18px;
       border-radius: 14px;
       background: #f7fff9;
       border: 1px solid rgba(15, 61, 31, 0.12);
@@ -106,8 +129,14 @@
       margin-bottom: 10px;
     }
 
-    ul { padding-left: 18px; }
-    li { margin: 8px 0; line-height: 1.6; }
+    ul {
+      padding-left: 18px;
+    }
+
+    li {
+      margin: 8px 0;
+      line-height: 1.6;
+    }
 
     .cta {
       display: flex;
@@ -127,7 +156,10 @@
       transition: transform 0.15s ease, opacity 0.15s ease;
     }
 
-    .btn:hover { transform: translateY(-1px); opacity: 0.95; }
+    .btn:hover {
+      transform: translateY(-1px);
+      opacity: 0.95;
+    }
 
     .btn-primary {
       background: var(--verde-escuro);
@@ -158,64 +190,6 @@
   <div class="container">
 
     <div class="top">
-      <div class="brand">
-        <img src="logo-super-socio.png" alt="Super Sócio">
-        <div>
-          <h1>Parceria Estratégica</h1>
-          <div style="margin-top:6px; color:#666; font-weight:600;">
-            Super Sócio • Aquisição de Recebíveis
-          </div>
-        </div>
-      </div>
-
-      <div class="badge" title="Parceria operacional/comercial com a NOOON">
-        <span>Em parceria com</span>
-        <a href="https://nooon.com.br" target="_blank" style="display:inline-flex; align-items:center;">
-          <img src="icon-nooon.png" alt="NOOON">
-        </a>
-      </div>
-    </div>
-
-    <div class="content">
-      <p>
-        O <strong>Super Sócio</strong> atua em parceria com os serviços e clientes da <strong>NOOON</strong>,
-        criando um caminho mais simples para organizações que desejam
-        <strong>estrutura, previsibilidade</strong> e <strong>velocidade</strong> no fluxo de caixa.
-      </p>
-
-      <p>
-        Esta página existe para <strong>deixar transparente</strong> a relação entre as operações:
-        quando fizer sentido, conectamos oportunidades do Super Sócio com a base de serviços e clientes NOOON,
-        sempre com foco em <strong>processo claro</strong> e <strong>alinhamento comercial</strong>.
-      </p>
-
-      <div class="box">
-        <h2>Como essa parceria funciona</h2>
-        <ul>
-          <li><strong>Conexão de oportunidades:</strong> quando há aderência, clientes e parceiros NOOON podem ser elegíveis a condições e fluxos facilitados.</li>
-          <li><strong>Critérios e transparência:</strong> cada operação segue avaliação e regras internas — nada “no escuro”.</li>
-          <li><strong>Experiência integrada:</strong> o objetivo é reduzir fricção e aumentar velocidade sem perder controle e conformidade.</li>
-        </ul>
-      </div>
-
-      <div class="box">
-        <h2>Contato direto</h2>
-        <p style="margin-bottom: 10px;">
-          Se você é cliente/parceiro NOOON e quer entender como se enquadrar:
-        </p>
-
-        <div class="cta">
-          <a class="btn btn-primary" href="https://wa.me/5583981815959" target="_blank">Falar no WhatsApp</a>
-          <a class="btn btn-ghost" href="mailto:contato@supersocio.com.br">Enviar e-mail</a>
-          <a class="btn btn-ghost" href="https://nooon.com.br" target="_blank">Visitar NOOON</a>
-        </div>
-      </div>
-
-      <div class="footer">
-        Página interna • Super Sócio & NOOON
-      </div>
-    </div>
-
-  </div>
-</body>
-</html>
+      <!-- LOGO CLICÁVEL → HOME -->
+      <a href="https://supersocio.com.br" class="brand" title="Voltar para o site do Super Sócio">
+        <img src="logo-sup
