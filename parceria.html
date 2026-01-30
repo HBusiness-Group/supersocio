@@ -16,172 +16,156 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <style>
-    :root {
-      --verde-escuro: #0f3d1f;
-      --verde-neon: #7CFF00;
-      --verde-claro: #f3fff7;
-      --cinza-texto: #2f2f2f;
+    :root{
+      --verde-escuro:#0f3d1f;
+      --verde-neon:#7CFF00;
+      --verde-claro:#f3fff7;
+      --cinza-texto:#2f2f2f;
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;}
+
+    body{
+      background:linear-gradient(180deg,#ffffff,var(--verde-claro));
+      color:var(--cinza-texto);
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:24px;
     }
 
-    body {
-      background: linear-gradient(180deg, #ffffff, var(--verde-claro));
-      color: var(--cinza-texto);
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 24px;
+    .container{
+      max-width:860px;
+      width:100%;
+      background:#fff;
+      padding:44px 32px;
+      border-radius:20px;
+      box-shadow:0 20px 40px rgba(0,0,0,0.08);
     }
 
-    .container {
-      max-width: 860px;
-      width: 100%;
-      background: #ffffff;
-      padding: 44px 32px;
-      border-radius: 20px;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    .top{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      flex-wrap:wrap;
+      margin-bottom:26px;
     }
 
-    .top {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      flex-wrap: wrap;
-      margin-bottom: 26px;
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:14px;
     }
 
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      text-decoration: none;
-      color: inherit;
+    .brand-logo-link{
+      display:inline-flex;
+      align-items:center;
+      border-radius:12px;
     }
 
-    .brand img {
-      height: 44px;
-      transition: transform 0.2s ease, opacity 0.2s ease;
+    .brand-logo-link img{
+      height:44px;
+      display:block;
+      transition:transform .2s ease, opacity .2s ease;
     }
 
-    .brand:hover img {
-      transform: scale(1.03);
-      opacity: 0.9;
+    .brand-logo-link:hover img{
+      transform:scale(1.03);
+      opacity:.9;
     }
 
-    h1 {
-      font-size: 1.6rem;
-      font-weight: 800;
-      color: var(--verde-escuro);
-      letter-spacing: 0.2px;
+    h1{
+      font-size:1.6rem;
+      font-weight:800;
+      color:var(--verde-escuro);
+      letter-spacing:.2px;
     }
 
-    .subtitle {
-      margin-top: 6px;
-      color: #666;
-      font-weight: 600;
-      font-size: 0.95rem;
+    .subtitle{
+      margin-top:6px;
+      color:#666;
+      font-weight:600;
+      font-size:.95rem;
     }
 
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 10px 14px;
-      border-radius: 999px;
-      border: 1px solid rgba(15, 61, 31, 0.12);
-      background: rgba(124, 255, 0, 0.08);
-      font-weight: 700;
-      color: var(--verde-escuro);
-      font-size: 0.9rem;
-      white-space: nowrap;
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:10px 14px;
+      border-radius:999px;
+      border:1px solid rgba(15,61,31,0.12);
+      background:rgba(124,255,0,0.08);
+      font-weight:700;
+      color:var(--verde-escuro);
+      font-size:.9rem;
+      white-space:nowrap;
     }
 
-    .badge img {
-      height: 22px;
-      opacity: 0.85;
+    .badge img{
+      height:22px;
+      opacity:.85;
+      display:block;
     }
 
-    .content p {
-      font-size: 1.02rem;
-      line-height: 1.7;
-      margin-bottom: 14px;
+    .content p{
+      font-size:1.02rem;
+      line-height:1.7;
+      margin-bottom:14px;
     }
 
-    .box {
-      margin-top: 18px;
-      padding: 18px;
-      border-radius: 14px;
-      background: #f7fff9;
-      border: 1px solid rgba(15, 61, 31, 0.12);
+    .box{
+      margin-top:18px;
+      padding:18px;
+      border-radius:14px;
+      background:#f7fff9;
+      border:1px solid rgba(15,61,31,0.12);
     }
 
-    .box h2 {
-      font-size: 1.05rem;
-      color: var(--verde-escuro);
-      margin-bottom: 10px;
+    .box h2{
+      font-size:1.05rem;
+      color:var(--verde-escuro);
+      margin-bottom:10px;
     }
 
-    ul {
-      padding-left: 18px;
+    ul{padding-left:18px;}
+    li{margin:8px 0;line-height:1.6;}
+
+    .cta{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:22px;
     }
 
-    li {
-      margin: 8px 0;
-      line-height: 1.6;
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:12px 16px;
+      border-radius:12px;
+      text-decoration:none;
+      font-weight:800;
+      transition:transform .15s ease, opacity .15s ease;
     }
 
-    .cta {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin-top: 22px;
+    .btn:hover{transform:translateY(-1px);opacity:.95;}
+
+    .btn-primary{background:var(--verde-escuro);color:#fff;}
+    .btn-ghost{border:1px solid rgba(15,61,31,0.18);color:var(--verde-escuro);background:#fff;}
+
+    .footer{
+      margin-top:26px;
+      font-size:.85rem;
+      color:#777;
+      text-align:center;
     }
 
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 12px 16px;
-      border-radius: 12px;
-      text-decoration: none;
-      font-weight: 800;
-      transition: transform 0.15s ease, opacity 0.15s ease;
-    }
-
-    .btn:hover {
-      transform: translateY(-1px);
-      opacity: 0.95;
-    }
-
-    .btn-primary {
-      background: var(--verde-escuro);
-      color: #fff;
-    }
-
-    .btn-ghost {
-      border: 1px solid rgba(15, 61, 31, 0.18);
-      color: var(--verde-escuro);
-      background: #fff;
-    }
-
-    .footer {
-      margin-top: 26px;
-      font-size: 0.85rem;
-      color: #777;
-      text-align: center;
-    }
-
-    @media (max-width: 600px) {
-      h1 { font-size: 1.35rem; }
-      .brand img { height: 40px; }
+    @media (max-width:600px){
+      h1{font-size:1.35rem;}
+      .brand-logo-link img{height:40px;}
     }
   </style>
 </head>
@@ -190,6 +174,65 @@
   <div class="container">
 
     <div class="top">
-      <!-- LOGO CLICÁVEL → HOME -->
-      <a href="https://supersocio.com.br" class="brand" title="Voltar para o site do Super Sócio">
-        <img src="logo-sup
+      <div class="brand">
+        <!-- Logo clicável -> volta para a home -->
+        <a class="brand-logo-link" href="https://supersocio.com.br" title="Voltar para o site do Super Sócio">
+          <img src="logo-super-socio.png" alt="Super Sócio">
+        </a>
+
+        <div>
+          <h1>Parceria Estratégica</h1>
+          <div class="subtitle">Super Sócio • Aquisição de Recebíveis</div>
+        </div>
+      </div>
+
+      <div class="badge" title="Parceria com a NOOON">
+        <span>Em parceria com</span>
+        <a href="https://nooon.com.br" target="_blank" style="display:inline-flex;align-items:center;">
+          <img src="icon-nooon.png" alt="NOOON">
+        </a>
+      </div>
+    </div>
+
+    <div class="content">
+      <p>
+        O <strong>Super Sócio</strong> atua em parceria com os serviços e clientes da <strong>NOOON</strong>,
+        criando um caminho mais simples para negócios que buscam
+        <strong>previsibilidade</strong>, <strong>organização</strong> e <strong>velocidade</strong> no fluxo de caixa.
+      </p>
+
+      <p>
+        Esta página é interna e tem como objetivo dar <strong>transparência</strong> à relação entre as operações,
+        conectando oportunidades quando há aderência estratégica e operacional.
+      </p>
+
+      <div class="box">
+        <h2>Como essa parceria funciona</h2>
+        <ul>
+          <li><strong>Conexão inteligente:</strong> oportunidades alinhadas ao perfil do cliente.</li>
+          <li><strong>Critérios claros:</strong> análise e enquadramento antes de qualquer operação.</li>
+          <li><strong>Experiência integrada:</strong> menos fricção, mais velocidade e controle.</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <h2>Contato direto</h2>
+        <p style="margin-bottom:10px;">
+          Se você é cliente ou parceiro NOOON e deseja entender melhor:
+        </p>
+
+        <div class="cta">
+          <a class="btn btn-primary" href="https://wa.me/5583981815959" target="_blank">Falar no WhatsApp</a>
+          <a class="btn btn-ghost" href="mailto:contato@supersocio.com.br">Enviar e-mail</a>
+          <a class="btn btn-ghost" href="https://nooon.com.br" target="_blank">Visitar NOOON</a>
+        </div>
+      </div>
+
+      <div class="footer">
+        Página interna • Super Sócio & NOOON
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
