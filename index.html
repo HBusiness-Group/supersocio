@@ -38,6 +38,7 @@
       align-items: center;
       justify-content: center;
       padding: 24px;
+      position: relative;
     }
 
     .container {
@@ -68,7 +69,7 @@
       margin-bottom: 28px;
     }
 
-    /* Ajuste: melhor contraste, mantendo toque neon */
+    /* Destaque com contraste e detalhe neon */
     .highlight {
       color: var(--verde-escuro);
       font-weight: 700;
@@ -104,9 +105,8 @@
       color: #777;
     }
 
-    /* Ajuste: ícone NOOON maior e mais visível */
     .parceria img {
-      height: 30px; /* antes 20px */
+      height: 30px;
       opacity: 0.8;
       transition: opacity 0.2s ease, transform 0.2s ease;
     }
@@ -120,6 +120,23 @@
       margin-top: 36px;
       font-size: 0.85rem;
       color: #777;
+    }
+
+    /* 🥚 Easter Egg */
+    .easter-egg {
+      position: fixed;
+      bottom: 12px;
+      right: 14px;
+      font-size: 20px;
+      text-decoration: none;
+      color: var(--verde-escuro);
+      opacity: 0.15;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+
+    .easter-egg:hover {
+      opacity: 0.6;
+      transform: scale(1.2);
     }
 
     @media (max-width: 600px) {
@@ -166,5 +183,9 @@
       © 2026 • Super Sócio
     </div>
   </div>
+
+  <!-- Easter Egg -->
+  <a href="parceria.html" class="easter-egg" title="Acesso interno">•</a>
+
 </body>
 </html>
